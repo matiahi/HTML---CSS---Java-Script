@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین ششم : تابع add 4 آرگمان با چک تعداد آرگمان</p>
+    <hr>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <input type="number" id="c">
+    <input type="number" id="d">
+    <p onclick="string()"> = </p>
+    <input type="number" id="f">
+    <p onclick="add()"> = </p>
+    <input type="number" id="e">
+    <script>
+
+        function add() {
+
+            document.getElementById("e").value = parseInt(document.getElementById('a').value) + parseInt(document.getElementById('b').value) + parseInt(document.getElementById('c').value) + parseInt(document.getElementById('d').value);
+        }
+
+    </script>
+    <script>
+        function string() {
+
+            document.getElementById("f").value = (document.getElementById('a').value) + (document.getElementById('b').value) + (document.getElementById('c').value) + (document.getElementById('d').value);
+        }
+    </script>
+</body>
+
+</html>

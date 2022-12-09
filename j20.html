@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <p id="p">تمرین بیستم : اگر مرد انتخاب شد لباسهای زنانه غیر فعال شود و برعکس</p>
+    <hr>
+    Select Your Gender :
+    <input type="radio" name="gender" value="male" onclick="change()"> male
+    <input type="radio" name="gender" value="female" onclick="change()"> female
+    <hr>
+    <input type="checkbox" name="wear" value="1">Keravat
+    <input type="checkbox" name="wear" value="2">Manto
+    <input type="checkbox" name="wear" value="3">Joorab
+    <input type="checkbox" name="wear" value="4">Roosari
+    <input type="checkbox" name="wear" value="5">Kot Shalavr
+    <input type="checkbox" name="wear" value="6">Shal
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function change() {
+            if ($('input[value=male]').prop('checked')) {
+                $('input:nth-child(even)').prop('disabled', false);
+                $('input:nth-child(odd)').prop('disabled', true);
+            }
+            else {
+                $('input:nth-child(odd)').prop('disabled', false);
+                $('input:nth-child(even)').prop('disabled', true);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

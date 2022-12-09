@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین پنجم :ماشین حساب</p>
+    <hr>
+    <table border="1">
+        <tr>
+            <td><input type="number" id="a"></td>
+            <td>
+
+                <input type="button" value="+" onclick="add()">
+                <input type="button" value="-" onclick="sub()">
+                <input type="button" value="*" onclick="mul()">
+                <input type="button" value="/" onclick="div()">
+
+
+            </td>
+            <td><input type="number" id="b"></td>
+            <td> = </td>
+            <td><input type="number" id="c" disabled></td>
+        </tr>
+    </table>
+
+    <script>
+        function add() {
+            document.getElementById('c').value = parseInt(document.getElementById('a').value) + parseInt(document.getElementById('b').value)
+        }
+        function sub() {
+            document.getElementById('c').value = document.getElementById('a').value - document.getElementById('b').value
+
+        }
+        function mul() {
+            document.getElementById('c').value = document.getElementById('a').value * document.getElementById('b').value
+        }
+        function div() {
+            document.getElementById('c').value = document.getElementById('a').value / document.getElementById('b').value
+        }
+
+    </script>
+</body>
+
+</html>

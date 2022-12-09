@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        .a {
+            display: inline-flex;
+            width: .75in;
+            height: .75in;
+
+            ;
+        }
+
+        td {
+            background-color: #0df;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p">تمرین پانزدهم : با تعریف کاربر سلول یکبار hide یکبار show و یکبار رنگ عوض کند</p>
+    <hr>
+    Row : <input type="text" id="row">
+    Column : <input type="text" id="col">
+    Color : <input type="color" id="clr">
+    <input type="button" value="Colorize" onclick="go()">
+
+    <table>
+        <tr>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+            </td>
+            <td>
+                <div class="a"></div>
+
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function go() {
+            var r = ($('#row').val());
+            var c = ($('#col').val());
+            $("tr:nth-child(" + r + ")>td:nth-child(" + c + ")").hide(1000).show(2000, function () {
+                $(this).css('background-color', document.getElementById("clr").value);
+
+            })
+        }
+    </script>
+</body>
+
+</html>

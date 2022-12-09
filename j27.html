@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+   </head>
+
+<body>
+    <p id="p">تمرین بیست و هفتم : از کاربر بخواهد یا تلفن ثابت و یا موبایل را حتما پرکند</p>
+    <hr>
+    <form id="phoneAndMobile">
+        Phone : <input type="text" id="phone">
+        <hr>
+        Mobile : <input type="text" id="mobile">
+        <hr>
+        <input type="submit" value="Register" >
+        <p style="color:red"></p>
+    </form>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $('#phoneAndMobile').submit(function (e) {
+            if ($('#phone').val() == "" && $('#mobile').val() == "") 
+                e.preventDefault();
+                $('p').text('کاربر گرامی لطفا یا شماره موبایل و یاشماره ثابت خود را وارد کنید');
+            
+        });        
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p">تمرین بیست و چهارم : تغییر رنگ پس زمینه با shift+r shift+g shift+b</p>
+    <hr>
+    Select R or G or B : <input type="text" id="a">
+    <br>
+    Press shift + r or g or b
+    <h2></h2>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).keydown(function (e) {
+            if (e.shiftKey == true && e.keyCode == 82) {
+                $('body').css('background-color', 'orangered');
+            }
+            else if (e.shiftKey == true && e.keyCode == 71) {
+                $('body').css('background-color', 'forestgreen');
+            }
+            else if (e.shiftKey == true && e.keyCode == 66) {
+                $('body').css('background-color', 'slateblue');
+            }
+            else { };
+        });
+    </script>
+</body>
+
+</html>

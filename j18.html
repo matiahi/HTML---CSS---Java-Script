@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        div {
+
+            height: 5in;
+            background-color: #45a;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p">تمرین هجدهم : با کلیک دکمه چپ توسط کاربر باکس به سمت چپ جمع شود و با کلید راست به نقطه قبلی برگردد</p>
+    <hr>
+    <input type="button" value="Slide To Left To Hide" onclick="sl()">
+    <input type="button" value="Slide To Right To Show" onclick="sr()">
+
+    <div id="cc" style="width: 5in"></div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        var oldWidth;
+        function sl() {
+            oldWidth = document.getElementById('cc').style.width;
+            $('div').animate({ 'width': '0px' }, 2000)
+        }
+
+        function sr() {
+            $('div').animate({ 'width': oldWidth }, 2000);
+
+        }
+
+    </script>
+</body>
+
+</html>

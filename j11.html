@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p id="p">تمرین یازدهم : تغییر رنگ پس زمینه با هر بار کلیک</p>
+    <hr>
+    <input type="button" value="Change" onclick="go2()">
+    <div class="a"></div>
+    <script>
+        debugger;
+
+
+        var flag = 1;
+        function go2() {
+
+            if (flag == 1) {
+
+                document.body.style.backgroundColor = "blue";
+            }
+            else if (flag == 2) {
+
+                document.body.style.backgroundColor = "red";
+            }
+            else if (flag == 3) {
+
+                document.body.style.backgroundColor = "black";
+            }
+            else if (flag == 4) {
+
+                document.body.style.backgroundColor = "green";
+            }
+            else if (flag == 5) {
+
+                document.body.style.backgroundColor = "yellow";
+            }
+            else if (flag == 6) {
+
+                document.body.style.backgroundColor = "gold";
+            }
+            else if (flag == 7) {
+
+                document.body.style.backgroundColor = "fuchsia";
+            }
+            else {
+
+                document.body.style.backgroundColor = "lime";
+            }
+
+            flag++;
+        }
+    </script>
+</body>
+
+</html>

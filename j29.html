@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و نهم : وقتی روی برو به بالا کلیک شد بره بالای صفحه</p>
+    <hr>
+    <p
+        style="width: 5in;height: 500in;background-image: linear-gradient(red,blue,lime,aqua,yellow,fuchsia,teal,grey,darkcyan,lightcoral,chocolate)">
+    </p>
+    <img src="Images/arrow-up.png" alt="" style="width: 100px;position: fixed;right:0;bottom:0;display: none">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop() > 1000) {
+                $('img').css('display', 'inline');
+            }
+            else {
+                $('img').css('display', 'none');
+            }
+        });
+
+
+        $('img').click(function () {
+            $('html,body').animate({ scrollTop: 0 });
+        })
+    </script>
+</body>
+
+</html>

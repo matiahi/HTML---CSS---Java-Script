@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین نوزدهم : نمایش متن آیتمهای انتخاب شده یک لیست باکس</p>
+    <hr>
+    <select id="courses" multiple onchange="go()">
+        <option value="1">web 1</option>
+        <option value="2">web 2</option>
+        <option value="3">web 3 </option>
+        <option value="4">mvc</option>
+        <option value="5">sql</option>
+    </select>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function go() {
+            var selectedItems = $('select:eq(0)').val();
+            for (var item in selectedItems) {
+                alert(
+                    $('#courses').children('option[value=' + selectedItems[item] + ']').text()
+                );
+            }
+        }
+    </script>
+</body>
+
+</html>

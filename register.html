@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="نونا محمدی" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<title>فرم ثبت نام</title>
+</head>
+<body bgcolor="#ACE8FD">
+ <a href="index.html" title="Back to Home">
+    <img src="Images/logo/Home.PNG" align="left"/></a>
+<form>
+  <table border="1" align="center" dir="rtl">
+    <caption><h3>
+    فرم ثبت نام دانشجویان آموزشگاه
+    </h3></caption>
+    <tbody>
+      <tr>
+        <td align="left">نام کاربری : </td>
+        <td><input type="text" name="us"></td>
+      </tr>
+      <tr>
+        <td align="left">کلمه عبور : </td>
+        <td><input type="password" name="pass"></td>
+      </tr>
+      <tr>
+        <td align="left">جنسیت : </td>
+        <td><label>
+            <input type="radio" name="gender" value="m" checked>
+            مرد</label>
+          <label>
+            <input type="radio" name="gender" value="f" required>
+            زن</label></td>
+      </tr>
+      <tr>
+        <td align="left">با چه زبانهایی آشنایی دارید : </td>
+        <td><label>
+            <input type="checkbox" name="lan" value="en" checked>
+            انگلیسی</label>
+          <label>
+            <input type="checkbox" name="lan" value="ge" >
+            آلمانی</label>
+          <label>
+            <input type="checkbox" name="lan" value="fa" >
+            فارسی</label>
+          <label>
+            <input type="checkbox" name="lan" value="fr" >
+            فرانسه</label></td>
+      </tr>
+      <tr>
+        <td align="left"> عکس پرسنلی : </td>
+        <td><input type="file" name="file" value="photo" multiple accept="audio/*"></td>
+      </tr>
+      <tr>
+        <td align="left"> ایمیل : </td>
+        <td align="right"><input type="email"  multiple></td>
+      </tr>
+      <tr>
+        <td align="left"> آدرس وبگاه : </td>
+        <td align="right"><input type="url" name="website" ></td>
+      </tr>
+      <tr>
+        <td align="left">قد : </td>
+        <td align="right"><input type="number" name="length" min="50" max="250" value="160" step="10"></td>
+      </tr>
+      <tr>
+        <td align="left">وزن : </td>
+        <td align="right"><input type="range" name="weight" min="20" max="200" value="50" step="5"></td>
+      </tr>
+      <tr>
+        <td align="left">رنگ مورد علاقه شما : </td>
+        <td align="right"><input type="color" name="color"  value="#1807F3"></td>
+      </tr>
+      <tr>
+      <tr>
+        <td align="left">ساعت : </td>
+        <td align="right"><input name="time" type="time" min="00:00:00" step="100" value="00:00:00"  ></td>
+      </tr>
+      <tr>
+      
+        <td align="left" >هفته : </td>
+        <td align="right"><input type="week" name="week"  ></td>
+      </tr>
+      <tr>
+      <tr>
+        <td align="left">ماه   : </td>
+        <td align="right"><input type="month" name="month" ></td>
+      </tr>
+      <tr>
+      <tr>
+        <td align="left">تاریخ : </td>
+        <td align="right"><input type="date" name="date"  ></td>
+      </tr>
+      <tr>
+      <tr>
+        <td align="left">تاریخ کاملا : </td>
+        <td align="right"><input type="datetime-local" name="datetime-local"  ></td>
+      </tr>
+		<tr>
+        <td align="left">آدرس : </td>
+        <td align="right"><textarea name="address" cols="5" rows="2" maxlength="5"></textarea></td>
+      </tr>
+			<tr>
+        <td align="left">سطح تحصیلات : </td>
+        <td align="right">
+			<select name="education" size="5">
+				<option value="1" disabled> سیکل</option>
+			
+				<option value="2"> دیپلم</option>
+					<option value="3"> فوق دیپلم</option>
+					<option value="4" selected> لیسانس</option>
+					<option value="5"> فوق لیسانس</option>
+					
+			</select></td></tr>
+					<tr>
+        <td align="left">متقاضی شرکت در چه دوره هایی می باشید؟  : </td>
+        <td align="right">
+			<select name="courses" multiple>
+				<option value="1" > photoshop</option>
+			
+				<option value="2"> c#</option>
+					<option value="3"> c++ </option>
+					<option value="4" selected> web 1</option>
+					<option value="5"> web2 </option>
+					<option value="6"> web3 </option>
+			</select></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="reset" value="بازنشانی"></td>
+      </tr>
+      <tr >
+        <td colspan="2" align="center"><input type="button" value="من را فشار بده" onClick="alert('hi')"></td>
+      </tr>
+      <tr>
+        <td colspan="2"  align="center"><input type="image" src="Images\logo\register.png" alt="register" width="100px"></td>
+      </tr>
+   </tbody>
+ </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین نهم : جدول ضرب</p>
+    <hr>
+    <button type="button" onclick="go()"> Generate Multiplication Table</button>
+    <div id="container"></div>
+    <script>
+        function go() {
+            var table;
+            table = "<table border='1'>";
+            for (var i = 1; i < 11; i++) {
+                table += "<tr>";
+
+
+                for (var j = 1; j < 11; j++) {
+                    table += "<td> " + i + "&times" + j + '=' + (i * j) + "</td>";
+                    // document.write(i*j+" ")
+                    //  document.write("<hr>");
+
+                }
+
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.getElementById('container').innerHTML = table;
+        }
+    </script>
+</body>
+
+</html>

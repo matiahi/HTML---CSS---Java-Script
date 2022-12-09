@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        div {
+            background-color: rgb(245, 245, 245);
+            border: solid purple;
+            width: 180px;
+            height: 130px;
+            padding: 10px;
+            margin: 400px 950px;
+
+        }
+
+        input {
+            align-self: center;
+        }
+
+        #txt {
+            height: 80px;
+            width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p"> تمرین چهاردهم : بعد از لود صفحه بعد از 3 ثانیه پنجره چت باز شود </p>
+    <hr>
+    <div style="display:none">
+        <span>
+            درود، اگر سوالی دارید در خدمتم
+            <input type="text" id="txt">
+            <input type="submit" value="Cancel" onclick="go()">
+        </span>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            document.querySelector('div').style.display = ''
+        }, 3000);
+        function go() {
+            document.querySelector('div').style.display = 'none'
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و سوم : فیلتر زبان</p>
+    <hr>
+    Enter Your Name : <input type="text">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        var list = ['a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J', 'k', 'K', 'l', 'L', 'm', 'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z']
+        $('input').keypress(function (e) {
+
+            if (list.includes(e.key)) {
+                e.preventDefault;
+                alert('لطفا زبان خود را فارسی کنید');
+
+            }
+            else { }
+        })           
+    </script>
+</body>
+
+</html>

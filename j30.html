@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        input {
+            width: 50px;
+        }
+
+        #pas {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p">تمرین سی : فرم پرداخت بانکی رمز بالای 16 تا بود بره cvv2 رو 3 تا بود بره رو ماه 2 تا بود بره رو سال</p>
+    <hr>
+    <p>لطفا مشخصات کارت عابر بانک خود را وارد نمایید</p>
+    <input type="text" id="fir"> -
+    <input type="text" id="sec"> -
+    <input type="text" id="thi"> -
+    <input type="text" id="for">
+    <hr>
+    Password : <input type="text" id="pas">
+    <hr>
+    CVV2 : <input type="text" id="cvv">
+    <hr>
+    Year : <input type="text" id="yer">
+    Mount : <input type="text" id="mon">
+    <hr>
+    <input type="submit" value="پرداخت" id="sub">
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+        $('#fir').keyup(function () {
+
+            if ($('#fir').val().length == 4) {
+                $('#sec').focus();
+            }
+        });
+        $('#sec').keyup(function () {
+
+            if ($('#sec').val().length == 4) {
+                $('#thi').focus();
+            }
+        });
+        $('#thi').keyup(function () {
+
+            if ($('#thi').val().length == 4) {
+                $('#for').focus();
+            }
+        });
+        $('#for').keyup(function () {
+
+            if ($('#for').val().length == 4) {
+                $('#pas').focus();
+            }
+        });
+        $('#pas').keyup(function () {
+
+            if ($('#pas').val().length == 8) {
+                $('#cvv').focus();
+            }
+        });
+        $('#cvv').keyup(function () {
+
+            if ($('#cvv').val().length == 3) {
+                $('#mon').focus();
+            }
+        });
+        $('#mon').keyup(function () {
+
+            if ($('#mon').val().length == 2) {
+                $('#yer').focus();
+            }
+        });
+        $('#yer').keyup(function () {
+
+            if ($('#yer').val().length == 2) {
+                $('#sub').focus();
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

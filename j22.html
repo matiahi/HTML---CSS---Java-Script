@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و دوم : فیلتر سایز و تایپ و تعداد عکس برای آپلود</p>
+    <hr>
+    <input type="file" multiple>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $('input').change(function (e) {
+            var files = $('input').prop('files');
+            if (files.length >= 3) {
+                alert('شما مجاز به انتخاب بیشتر از 2 عکس نیستید');
+            }
+            else { };
+
+            for (var file in files) {
+
+                if (files[file].size >= 51200) {
+                    alert('سایز عکسها باید کوچکتر از 50 کیلو باشد');
+                    numOfInvalidFiles++;
+                }
+                else { };
+            }
+
+            for (var file in files) {
+                if (files[file].type == 'image/jpeg' || files[file].type == 'image/png' || files[file].type == 'image/gif') {
+                    //     console.log(file)
+                    // استاد این فیلتر تایپ 3 تا پیغام میده، دلیلشو آخر نفهمیدم
+                }
+                else {
+                    //     console.log(files[file].type)
+                    alert('فرمت jpg و png مورد قبول است');
+                };
+            }
+        })
+
+    </script>
+</body>
+
+</html>

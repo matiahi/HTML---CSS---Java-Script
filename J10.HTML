@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <p id="p">تمرین دهم : وقتی چک باکس تیک خورد دکمه زیر آن فعال شود</p>
+  <hr>
+  <input type="checkbox" id="ch" />
+  <input type="button" disabled="true" value="submit" id="bu">
+  <script>
+
+    var bu = document.getElementById('bu');
+    document.getElementById('ch').onchange = function (event) {
+      if (event.target.checked) {
+        bu.disabled = false;
+
+      } else {
+        bu.disabled = true;
+      }
+    };
+
+
+  </script>
+</body>
+
+</html>

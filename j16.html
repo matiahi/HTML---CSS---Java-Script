@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین شانزدهم : نوشتن Jquery Fqdeout Effect بدون آوردن یک خط کد Jquery همش با جاوا اسکریپت</p>
+    <hr>
+    <div id="div" style="width: 1200px; height:350px; background-color: navy; opacity: 1"> </div>
+    Select Your Time <input type="text" id="in">
+    <input type="button" value="click" onclick="go()">
+    <script>
+
+        var w = 100;
+        function go() {
+            var i = setInterval(function () {
+                if (w >= 0) {
+                    document.getElementById('div').style.opacity = w / '100';
+                    w--;
+                }
+                else {
+
+                }
+            }, document.getElementById('in').value)
+        };
+
+    </script>
+
+</body>
+
+</html>

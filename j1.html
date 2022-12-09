@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: aqua">
+	<p id="p">تمرین اول: ورود و خروج موس ، تغییر کردن و کلیک کردن</p>
+	<hr>
+	<table border="1" align="center" dir="rtl" height="250">
+		<tr>
+			<td colspan="2">
+				<img src="Images/logo/login-icon.jpg" onMouseOver="alert('شما روی عکس هستید')"
+					onMouseOut="alert('شما از روی عکس خارج شدید')">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button type="button" onclick="alert('جنسیت خود را مشخص کنید')">
+					<img src="Images/logo/green-start-button-png-2.png">
+
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				نام خود را وارد کنید :
+				<input type="text" id="txt">
+				<input type="button" value="Enter"
+					onClick="alert(document.getElementById('txt').value +' , welcome to my page') ">
+			</td>
+		</tr>
+		<tr>
+			<td align="left">جنسیت : </td>
+			<td><label>
+					<input type="radio" name="gender" value="m" checked onclick="alert('شما جنسیت خود را تغییر دادید!')">
+					مرد</label>
+				<label>
+					<input type="radio" name="gender" value="f" required onclick="alert('شما جنسیت خود را تغییر دادید!')">
+					زن</label></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				رنگ مورد علاقه خود را انتخاب کنید :
+				<input type="color" id="col"
+					onchange="document.body.style.backgroundColor=document.getElementById('col').value">
+
+			</td>
+		</tr>
+
+	</table>
+
+</body>
+
+</html>

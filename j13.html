@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <p id="p">تمرین سیزدهم : Live content </p>
+    <hr>
+    <div class="progress">
+        <div id="a" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:0;"> w%
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+        var width = 1;
+        var i = setInterval(function () {
+            if (width >= 100) {
+                clearInterval(i);
+
+
+            }
+            else {
+                width++;
+                document.getElementById('a').style.width = width + '%';
+                document.getElementById('a').innerHTML = width * 1 + '%';
+            }
+
+        }, 50);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Sols';
+	src: url('a thuluth.eot');
+	src: url('a thuluth.eot?#iefix') format('embedded-opentype'),
+		url('a thuluth.woff') format('woff'),
+		url('a thuluth.ttf') format('truetype');
+}

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین هشتم : بر حسب زمان روز پیغام سلام صبح بخیر، ظهربخیر، عصربخیر و شب بخیر بدهد</p>
+    <hr>
+    <h1> <mark id="d"></mark></h1>
+    <script>
+        var now = new Date();
+        var hour = now.getHours();
+        //alert(hour); 
+        {
+
+            if (hour <= 7)
+                document.getElementById('d').innerHTML = "صبح بخیر";
+            else if (hour <= 12)
+                document.getElementById('d').innerHTML = "ظهر بخیر";
+            else if (hour <= 17)
+                document.getElementById('d').innerHTML = "عصر بخیر";
+            else if (hour <= 20)
+                document.getElementById('d').innerHTML = "شب بخیر";
+            else
+                document.getElementById('d').innerHTML = "شب بخیر";
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و یکم : صفحه وقتی باز شد اگر عرض کمتر از 700 و ارتفاع کمتر از 400 بود پیغام دهد از صفحه نمایش
+        بزرگ استفاده شود</p>
+    <hr>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            if ($(window).width() <= 700 || $(window).height() <= 400)
+                alert(' برای استفاده از سایت صفحه مرورگر خود را بزرگتر نمایید  ');
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

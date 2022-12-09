@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و هشتم : برابر بودن پسورد و کانفرم پسورد</p>
+    <hr>
+    Password : <input type="password" name="pass" id="pas">
+    <hr>
+    Confirm Password : <input type="password" name="con-pass" id="conpass">
+    <br>
+    <input type="submit" val="Send" >
+    <br>
+    <p id="t" style="color:red"></p>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+        function checkPass() {
+
+            if ($('#pas').val() == $('#conpass').val()) {
+                return true;
+            }
+            else {
+                return false;
+            };
+        }
+        $('input:password').focusout(function () {
+            if (checkPass() == false) {
+                ($('#t').text('Passwords are not match, Plz check it again'));
+            }
+            else {
+                ($('#t').text(''));
+            }
+        });
+        $('form').submit(function (e) {
+            if (checkPass() == false) {
+                e.preventDefault;
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>

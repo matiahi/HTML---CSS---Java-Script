@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <p id="p">تمرین بیست و پنجم : نوشتن متن کنار پسورد بار که پسورد ضعیف، متوسط و یا قوی است</p>
+    <hr>
+    Password : <input type="password" id="pass">
+    <br>
+    <span id="res"></span>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $('#pass').keypress(function () {
+
+            var l = $(this).val().length + 1;
+            //console.log(l);
+            if (l < 6) {
+                $(this).css('border', 'solid red');
+                $('#res').text('Password Strength : Very Weak').css('color', 'red');
+            }
+            else if (l >= 6, l < 8) {
+                $(this).css('border', 'solid orange');
+                $('#res').text('Password Strength :  Weak').css('color', 'orange');
+            }
+            else if (l >= 8, l < 10) {
+                $(this).css('border', 'solid yellow');
+                $('#res').text('Password Strength :  Medium').css('color', 'yellow');
+            }
+            else if (l >= 10, l < 12) {
+                $(this).css('border', 'solid lightgreen');
+                $('#res').text('Password Strength :  Strong').css('color', 'lightgreen');
+            }
+            else if (l >= 12) {
+                $(this).css('border', 'solid green');
+                $('#res').text('Password Strength : Very Strong').css('color', 'green');
+            }
+            else {
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>
